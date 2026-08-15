@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>MySite</title>
 
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Website name */
+        .site-name {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        /* Navbar */
         .navbar {
-            width: 80%;
-            margin: 20px auto;
+            width: 250px;
+            margin-left: 20px;
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -16,19 +29,29 @@
 
         .nav-container {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .nav-container a {
             text-decoration: none;
             color: black;
             font-size: 18px;
+            padding: 10px;
+        }
+
+        .nav-container a:hover {
+            background-color: #eee;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
+
+    <div class="site-name">
+        MySite
+    </div>
 
     <div class="navbar">
         <div class="nav-container">
