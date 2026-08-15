@@ -14,36 +14,59 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f7fb;
+            color: white;
         }
 
-        /* Header */
+        /* Full screen background */
+        .hero {
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Navbar */
         .header {
-            width: 100%;
-            height: 80px;
+            width: 92%;
+            height: 75px;
+            margin: 20px auto;
+
             display: flex;
             align-items: center;
-            padding: 0 50px;
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+            padding: 0 35px;
+
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
 
         /* Website name */
         .site-name {
             font-size: 30px;
             font-weight: bold;
-            color: white;
+
             margin-right: 100px;
+
             cursor: pointer;
+
             transition: 0.3s;
         }
 
         .site-name:hover {
+            color: #00eaff;
             transform: scale(1.08);
-            color: #ffd166;
         }
 
-        /* Navbar */
+        /* Navigation */
         .navbar {
             flex: 1;
         }
@@ -52,65 +75,159 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            width: 100%;
         }
 
-        /* Navigation links */
         .nav-container a {
             position: relative;
+
             text-decoration: none;
             color: white;
+
             font-size: 18px;
             font-weight: 500;
-            padding: 12px 25px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            border-radius:20px;
-        }
-        /* Hover background */
-        .nav-container a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #ffd166;
-            transform: translateY(-2px);
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
         }
 
-        /* Underline animation */
+        /* Hover effect */
+        .nav-container a:hover {
+            color: #00eaff;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+        }
+
+        /* Animated underline */
         .nav-container a::after {
             content: "";
+
             position: absolute;
+
             width: 0;
             height: 3px;
+
             left: 50%;
-            bottom: 4px;
-            background-color: #ffd166;
-            transition: all 0.3s ease;
+            bottom: 3px;
+
+            background: #00eaff;
+
             transform: translateX(-50%);
+
+            transition: 0.3s;
         }
 
         .nav-container a:hover::after {
             width: 60%;
         }
+
+        /* Hero content */
+        .hero-content {
+            height: calc(100vh - 115px);
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            max-width: 600px;
+
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .hero-button {
+            text-decoration: none;
+
+            padding: 14px 35px;
+
+            background: #00c6ff;
+            color: white;
+
+            border-radius: 30px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: #00eaff;
+
+            transform: scale(1.08);
+
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
+        }
+
     </style>
 </head>
 
 <body>
 
-    <header class="header">
+    <div class="hero">
 
-        <div class="site-name">
-            MySite
-        </div>
+        <!-- Navbar -->
+        <header class="header">
 
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+            <div class="site-name">
+                MySite
             </div>
-        </nav>
 
-    </header>
+            <nav class="navbar">
+
+                <div class="nav-container">
+
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+
+        <!-- Main content -->
+        <section class="hero-content">
+
+            <h1>Welcome to MySite</h1>
+
+            <p>
+                Explore our website and discover something amazing.
+                Simple, modern and designed for you.
+            </p>
+
+            <a href="#" class="hero-button">
+                Explore Now
+            </a>
+
+        </section>
+
+    </div>
 
 </body>
 </html>
