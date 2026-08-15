@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navbar</title>
+
+    <style>
+        .navbar {
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+    </style>
 </head>
+
 <body>
-    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS74rSCa9dpCdoZBRiwXEiskm-CZD6c74CohgnUCGdZew&s=10" alt="name"></image>
+
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
 </body>
 </html>
