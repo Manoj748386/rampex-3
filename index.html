@@ -11,55 +11,62 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ccc;
+        }
+
         /* Website name */
         .site-name {
             font-size: 28px;
             font-weight: bold;
-            padding: 20px;
+            margin-right: 50px;
         }
 
         /* Navbar */
         .navbar {
-            width: 250px;
-            margin-left: 20px;
-            padding: 15px;
+            padding: 10px 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
         }
 
         .nav-container {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            gap: 50px;
         }
 
         .nav-container a {
             text-decoration: none;
             color: black;
             font-size: 18px;
-            padding: 10px;
         }
 
         .nav-container a:hover {
-            background-color: #eee;
-            border-radius: 5px;
+            color: blue;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="site-name">
-        MySite
-    </div>
+    <div class="header">
 
-    <div class="navbar">
-        <div class="nav-container">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+        <div class="site-name">
+            MySite
         </div>
+
+        <div class="navbar">
+            <div class="nav-container">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
     </div>
 
 </body>
