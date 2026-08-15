@@ -6,68 +6,77 @@
     <title>MySite</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
         }
 
-        /* Header */
+        /* Full laptop-width header */
         .header {
+            width: 100%;
+            height: 80px;
             display: flex;
             align-items: center;
-            padding: 15px 30px;
-            border-bottom: 1px solid #ccc;
+            padding: 0 60px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
         }
 
         /* Website name */
         .site-name {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
-            margin-right: 50px;
+            margin-right: 120px;
         }
 
-        /* Navbar */
+        /* Navigation */
         .navbar {
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
+            flex: 1;
         }
 
         .nav-container {
             display: flex;
-            gap: 50px;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
         .nav-container a {
             text-decoration: none;
-            color: black;
+            color: #222;
             font-size: 18px;
+            padding: 15px 40px;
         }
 
         .nav-container a:hover {
-            color: blue;
+            color: #007bff;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
+    <header class="header">
 
         <div class="site-name">
             MySite
         </div>
 
-        <div class="navbar">
+        <nav class="navbar">
             <div class="nav-container">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
             </div>
-        </div>
+        </nav>
 
-    </div>
+    </header>
 
 </body>
 </html>
